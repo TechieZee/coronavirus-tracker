@@ -51,7 +51,6 @@ public class CoronavirusTrackerService {
                      + Integer.parseInt(record.get(record.size() - 6))
                      + Integer.parseInt(record.get(record.size() - 7));
              locationData.setLast7DaysCases(last7DayCases);
-             System.out.println(locationData);
              tempStats.add(locationData);
         }
         this.data = tempStats;
