@@ -19,8 +19,10 @@ public class HomeController {
     public String Home(Model model) {
         List<LatestDataModel> data = service.getData();
         int totalCases = data.stream().mapToInt(stat -> stat.getLastDayCases()).sum();
+        int totalNewCases = data.stream().mapToInt(stat -> stat.getDiffFromPrevDay()).sum();
         model.addAttribute("data", data);
         model.addAttribute("totalCases", totalCases);
+        model.addAttribute("totalNewCases", totalNewCases);
         return "index";
     }
 }
