@@ -56,6 +56,9 @@ public class CoronavirusTrackerService {
         this.data = tempStats;
     }
 
+
+
+
     public List<LatestDataModel> getData() {
         return data;
     }
